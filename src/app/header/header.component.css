@@ -17,13 +17,14 @@ header{
   width: 50%;
   position: absolute;
   top:50%;
-  left:50%;
+  left:60%;
   transform: translate(-50%, -50%);
 }
 
 .rightBlock{
   float: right;
   display: flex;
+  padding-right: 20px;
 
 }
 .signBtn{
@@ -34,3 +35,17 @@ header{
 ul{
   display: flex;
 }
+
+li{
+  list-style: none;
+  color:#ece7e7;
+}
+ a{
+   text-decoration: none;
+   color:#ece7e7;
+   padding: 0 10px;
+ }
+
+ .logo{
+   font-size: 22px;
+ }

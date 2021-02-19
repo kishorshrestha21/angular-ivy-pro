@@ -1,8 +1,11 @@
 <header>
   <div class="leftBlock">
     <a href="" class="logo">Logo</a>
-    <a href="" class="back">	&#60; Back to Product</a>
-    <a href="" class="back"> 	&#60; Back to Gallery</a>
+    <ng-container *ngIf = "goBackLink">
+      <a href="" class="back">	&#60; Back to Product</a>
+      <a href="" class="back"> 	&#60; Back to Gallery</a>
+    </ng-container>
+    
   </div>
 
   <div class="centerBlock">
@@ -10,13 +13,22 @@
   </div>
 
   <div class="rightBlock">
-    <div class="signBtn">
-      <button>Sign In</button>
+    <ng-container *ngIf = "logInBlock">
+       <div class="signBtn">
+          <button>Sign In</button>
+        </div>
+      
+        <ul>
+          <li>Welcome</li>
+          <li><a href="">Log Out</a></li>
+        </ul>
+     
+    </ng-container>
+
+    <div class="contact">
+      <li><a href="mailto:iamkishorshrestha@gmail.com">iamkishorshrestha@gmail.com</a></li>
+      <li><a href="tel:631-480-7919"></a>631-480-7919</li>
     </div>
-   
-    <ul>
-      <li>Welcome</li>
-      <li><a href="">Log Out</a></li>
-    </ul>
   </div>
+   
 </header>

@@ -9,6 +9,7 @@ import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { HeaderServiceService } from './header-service.service';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
@@ -18,7 +19,8 @@ const appRoutes:Routes =[
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes)],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent ],
   bootstrap:    [ AppComponent ],
-  exports:[RouterModule]
+  exports:[RouterModule],
+  providers: [HeaderServiceService]
 })
 export class AppModule { }
 

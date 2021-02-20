@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderServiceService } from './header-service.service';
 import { GalleryComponent } from './gallery/gallery.component';
+import { MyGalleryModule } from './my-gallery/my-gallery.module';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
@@ -22,7 +23,7 @@ const appRoutes:Routes =[
   declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent ],
   bootstrap:    [ AppComponent ],
   exports:[RouterModule],
-  providers: [HeaderServiceService]
+  providers: [HeaderServiceService, MyGalleryModule]
 })
 export class AppModule { }
 

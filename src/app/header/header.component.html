@@ -1,14 +1,12 @@
 <header>
   <div class="leftBlock">
     <a href="" class="logo">Logo</a>
-    <ng-container *ngIf = "goBackLink">
-      <a href="" class="back">	&#60; Back to Product</a>
-      <a href="" class="back"> 	&#60; Back to Gallery</a>
-    </ng-container>
-    
+
+      <a routerLink = "/gallery" class="back" *ngIf = "goBackLink">	&#60; {{goBackLink}}</a>
+     
   </div>
 
-  <div class="centerBlock">
+  <div class="centerBlock" *ngIf="navBlock">
     <app-nav></app-nav>
   </div>
 

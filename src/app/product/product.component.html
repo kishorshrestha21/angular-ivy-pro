@@ -1,0 +1,11 @@
+
+<h2>Product</h2>
+<div class="product">
+  <div class="imgDetail" *ngFor = "let galleryImage of galleryImages">
+    <a routerLink= "{{galleryImage.id}}">
+      <img src="{{galleryImage.imgUrl}}" alt="">
+      <p>{{galleryImage.title}}</p>
+    </a>
+   
+  </div>
+</div>

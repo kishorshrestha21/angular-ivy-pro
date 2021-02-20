@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy,  OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { HeaderServiceService } from '../header-service.service';
 import { MyGalleryModule } from '../my-gallery/my-gallery.module';
@@ -8,7 +8,7 @@ import { MyGalleryModule } from '../my-gallery/my-gallery.module';
   templateUrl: './gallery-item.component.html',
   styleUrls: ['./gallery-item.component.css']
 })
-export class GalleryItemComponent implements OnInit {
+export class GalleryItemComponent implements OnInit, OnDestroy {
 galleryImages = [];
 selectedItem:any;
 id:any;
@@ -18,6 +18,7 @@ id:any;
     private _activedRoute:ActivatedRoute
     ) { }
 
+
   ngOnInit() {
     this. galleryImages = this._gallery.galleryImages;
     // console.log(this.galleryImages)
@@ -26,9 +27,27 @@ id:any;
     this.selectedItem =this._gallery.galleryImages[this.id -1]
       // console.log(this.id);
 
-      this._header.goBackLink.next(true);
+// for go back link
+      this._header.goBackLink.next('go Back to Gallery');
+
+      // for nav 
+       this._header.navBlock.next(false);
     })
 
   }
 
+  ngOnDestroy(): void {
+// for go back link
+      this._header.goBackLink.next('');
+
+      // for nav 
+       this._header.navBlock.next(true);
 }
+onNext(){
+  alert("hello")
+   
+
+}
+
+}
+

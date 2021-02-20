@@ -13,16 +13,20 @@ import { HeaderServiceService } from './header-service.service';
 import { GalleryComponent } from './gallery/gallery.component';
 import { MyGalleryModule } from './my-gallery/my-gallery.module';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { ProductComponent } from './product/product.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path: 'gallery', component:GalleryComponent},
   {path:'gallery/:id',component:GalleryItemComponent},
+  {path:'product',component:ProductComponent},
+  {path:'product/:id', component:ProductItemComponent},
   {path:'contact', component:ContactComponent}
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent, GalleryItemComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent, GalleryItemComponent, ProductComponent, ProductItemComponent ],
   bootstrap:    [ AppComponent ],
   exports:[RouterModule],
   providers: [HeaderServiceService, MyGalleryModule]

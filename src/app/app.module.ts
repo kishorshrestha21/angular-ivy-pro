@@ -14,6 +14,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
+  {path: 'gallery', component:GalleryComponent},
   {path:'contact', component:ContactComponent}
 ]
 @NgModule({

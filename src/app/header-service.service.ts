@@ -5,6 +5,8 @@ import { BehaviorSubject } from 'rxjs';
 export class HeaderServiceService {
 
 contactDetail=new BehaviorSubject(false); //for header contact detail
+goBackLink = new BehaviorSubject (false);
+
   constructor() { }
 
 }

@@ -15,6 +15,10 @@ contactDetail:boolean =false;
     this._header.contactDetail.subscribe(res => {
       this.contactDetail = res
       });
+
+      this._header.goBackLink.subscribe(res => {
+      this.goBackLink = res
+      });
   }
 
   ngOnInit() {

@@ -1,0 +1,15 @@
+
+.galleryItemWrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+ img{
+   height: 500px;
+ }
+
+ h2{
+   text-align: center;
+   color: green;
+ }

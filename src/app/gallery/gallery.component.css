@@ -21,8 +21,10 @@
    border: 1px solid rgba(156, 140, 140, 0.219);
    text-align: center;
    color: rgb(99, 94, 94);
+   cursor: pointer;
 
  }
+
 
  h2 {
    text-align: center;

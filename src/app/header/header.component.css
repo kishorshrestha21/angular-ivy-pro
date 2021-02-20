@@ -65,3 +65,8 @@ li{
  .logo{
    font-size: 22px;
  }
+
+.contact li{
+  height: 20px;
+  line-height: 40px;
+}

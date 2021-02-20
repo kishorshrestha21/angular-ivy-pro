@@ -14,18 +14,19 @@
 
   <div class="rightBlock">
     <ng-container *ngIf = "logInBlock">
-       <div class="signBtn">
+
+       <div class="signBtn" *ngIf ="!logInUser">
           <button>Sign In</button>
         </div>
       
-        <ul>
+        <ul *ngIf ="logInUser">
           <li>Welcome</li>
           <li><a href="">Log Out</a></li>
         </ul>
      
     </ng-container>
 
-    <div class="contact">
+    <div class="contact" *ngIf="contactDetail">
       <li><a href="mailto:iamkishorshrestha@gmail.com">iamkishorshrestha@gmail.com</a></li>
       <li><a href="tel:631-480-7919"></a>631-480-7919</li>
     </div>

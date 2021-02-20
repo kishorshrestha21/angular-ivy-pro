@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 goBackLink:boolean = false;
 logInBlock:boolean = true;
+logInUser:boolean = false;
+contactDetail:boolean =false;
   constructor() { }
 
   ngOnInit() {

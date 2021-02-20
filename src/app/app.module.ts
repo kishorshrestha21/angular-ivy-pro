@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderServiceService } from './header-service.service';
+import { GalleryComponent } from './gallery/gallery.component';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
@@ -17,7 +18,7 @@ const appRoutes:Routes =[
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent ],
   bootstrap:    [ AppComponent ],
   exports:[RouterModule],
   providers: [HeaderServiceService]

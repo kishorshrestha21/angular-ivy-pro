@@ -15,7 +15,7 @@ goBackLink = new BehaviorSubject ({text: '', url:''});
 
  logInBlock= new BehaviorSubject (true);
 
-logInUser= new BehaviorSubject (false);
+logInUser= new BehaviorSubject ('');
 
 
   constructor() { }

@@ -18,9 +18,9 @@
         </div>
       
         <ul *ngIf ="logInUser">
-          <li>Welcome</li>
-          <li><a href="">Log Out</a></li>
-        </ul>
+          <li>Welcome <strong>{{logInUser| titlecase}}</strong></li>
+          <li><a href="javascript:void(0)"(click)="onLogOut()">Log Out</a></li>
+        </ul> 
      
     </ng-container>
 

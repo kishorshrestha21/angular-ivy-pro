@@ -2,7 +2,7 @@
    <form class="form">
      <h2>Please Sign In</h2>
      <input type="text" #username id="inputUser" placeholder="Username"><br>
-     <input type="password" id ="inputPassword" placeholder="Password"><br>
-     <button (click)="onSignIn(username)">Sign In</button><br>
+     <input type="password" #password id ="inputPassword" placeholder="Password"><br>
+     <button (click)="onSignIn(username, password)">Sign In</button><br>
    </form>
  </div>

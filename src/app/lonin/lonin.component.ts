@@ -1,4 +1,7 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HeaderServiceService } from '../header-service.service';
 
 @Component({
   selector: 'app-lonin',
@@ -7,13 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoninComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _header:HeaderServiceService,
+    private router:Router
+    ) { }
 
   ngOnInit() {
   }
 
-  onSignIn(username){
-    alert(username.value);
+  onSignIn(username, password){
+    // alert(username.value);
+    if(password.value == '123'){
+    this._header.logInUser.next(username.value);
+    this.router.navigate(['home'])
+    }
+    else{
+      alert("Password is 123");
+    }
+ 
   }
 
 }

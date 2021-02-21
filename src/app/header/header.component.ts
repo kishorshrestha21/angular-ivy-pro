@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeaderServiceService } from '../header-service.service';
 
 @Component({
@@ -9,10 +10,13 @@ import { HeaderServiceService } from '../header-service.service';
 export class HeaderComponent implements OnInit {
 goBackLink;
 logInBlock;
-logInUser:boolean = true;
+logInUser;
 contactDetail;
 navBlock;
-  constructor(private _header:HeaderServiceService) { 
+  constructor(
+    private _header:HeaderServiceService,
+    private router:Router
+  ) { 
     // for contact detail
     this._header.contactDetail.subscribe(res => {
       this.contactDetail = res
@@ -36,6 +40,12 @@ navBlock;
   }
 
   ngOnInit() {
+  }
+
+  onLogOut(){
+    this.logInUser = '';
+    this.router.navigate(['login']);
+
   }
 
 }

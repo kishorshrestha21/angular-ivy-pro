@@ -6,7 +6,9 @@
   transform: translate(-50%, -50%);
 }
  img{
-   height: 500px;
+   max-width:100%;
+  display:block;
+  height:auto;
  }
 
  h2{

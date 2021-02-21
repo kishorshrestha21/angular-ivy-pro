@@ -8,10 +8,10 @@ import { HeaderServiceService } from '../header-service.service';
 })
 export class HeaderComponent implements OnInit {
 goBackLink;
-logInBlock:boolean = false;
-logInUser:boolean = false;
-contactDetail:boolean =false;
-navBlock:boolean = true;
+logInBlock;
+logInUser:boolean = true;
+contactDetail;
+navBlock;
   constructor(private _header:HeaderServiceService) { 
     // for contact detail
     this._header.contactDetail.subscribe(res => {
@@ -27,6 +27,12 @@ navBlock:boolean = true;
       this._header.navBlock.subscribe(res=> {
         this.navBlock = res;
       })
+//login block
+      this._header.logInBlock.subscribe(res=>{
+        this.logInBlock =res
+      })
+
+      this._header.logInUser.subscribe(res=> this.logInUser = res)
   }
 
   ngOnInit() {

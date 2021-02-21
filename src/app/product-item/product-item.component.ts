@@ -27,7 +27,7 @@ id:any;
         this.selectedItem = this._gallery.galleryImages[this.id-1]
 
         // for go back link
-      this._header.goBackLink.next("Go Back To product");
+      this._header.goBackLink.next({text: 'Back to Product', url:'/product'});
 
       // for nav 
        this._header.navBlock.next(false);
@@ -36,7 +36,7 @@ id:any;
 
    ngOnDestroy(): void {
 // for go back link
-      this._header.goBackLink.next('');
+      this._header.goBackLink.next({text: '', url:''});
 
       // for nav 
        this._header.navBlock.next(true);

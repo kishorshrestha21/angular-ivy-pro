@@ -2,7 +2,7 @@
   <div class="leftBlock">
     <a href="" class="logo">Logo</a>
 
-      <a routerLink = "/gallery" class="back" *ngIf = "goBackLink">	&#60; {{goBackLink}}</a>
+      <a routerLink = "{{goBackLink.url}}" class="back" *ngIf = "goBackLink.text">	&#60; {{goBackLink.text}}</a>
      
   </div>
 
@@ -14,7 +14,7 @@
     <ng-container *ngIf = "logInBlock">
 
        <div class="signBtn" *ngIf ="!logInUser">
-          <button>Sign In</button>
+          <button routerLink = "/login">Sign In</button>
         </div>
       
         <ul *ngIf ="logInUser">

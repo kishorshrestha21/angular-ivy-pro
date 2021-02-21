@@ -28,7 +28,7 @@ id:any;
       // console.log(this.id);
 
 // for go back link
-      this._header.goBackLink.next('go Back to Gallery');
+      this._header.goBackLink.next({text: 'Back to Gallery', url:'/gallery'});
 
       // for nav 
        this._header.navBlock.next(false);
@@ -38,7 +38,7 @@ id:any;
 
   ngOnDestroy(): void {
 // for go back link
-      this._header.goBackLink.next('');
+      this._header.goBackLink.next({text: '', url:''});
 
       // for nav 
        this._header.navBlock.next(true);

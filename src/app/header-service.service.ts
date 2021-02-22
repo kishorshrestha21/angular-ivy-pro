@@ -17,7 +17,9 @@ goBackLink = new BehaviorSubject ({text: '', url:''});
 
 logInUser= new BehaviorSubject ('');
 
+//  test for about Page
 
+test= new BehaviorSubject ('');
   constructor() { }
 
 }

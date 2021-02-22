@@ -16,9 +16,11 @@ import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { ProductComponent } from './product/product.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { LoninComponent } from './lonin/lonin.component';
+import { AboutComponent } from './about/about.component';
 const appRoutes:Routes =[
   {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
+  {path:'about', component:AboutComponent},
   {path: 'gallery', component:GalleryComponent},
   {path:'gallery/:id',component:GalleryItemComponent},
   {path:'product',component:ProductComponent},
@@ -28,7 +30,7 @@ const appRoutes:Routes =[
 ]
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent, GalleryItemComponent, ProductComponent, ProductItemComponent, LoninComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavComponent, ContactComponent, HomeComponent, GalleryComponent, GalleryItemComponent, ProductComponent, ProductItemComponent, LoninComponent, AboutComponent ],
   bootstrap:    [ AppComponent ],
   exports:[RouterModule],
   providers: [HeaderServiceService, MyGalleryModule]

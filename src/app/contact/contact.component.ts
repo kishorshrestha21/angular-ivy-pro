@@ -15,6 +15,8 @@ export class ContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._header.contactDetail.next(true);
     this._header.logInBlock.next(false);
+
+  
   }
   
   ngOnDestroy(){
